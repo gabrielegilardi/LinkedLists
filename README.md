@@ -1,6 +1,6 @@
 # Linked List Data Structures
 
-Single-linked list and double-linked list.
+Single and double linked list data structures.
 
 ## Reference
 
