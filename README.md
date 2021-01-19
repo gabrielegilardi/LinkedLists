@@ -66,7 +66,7 @@ add_after()     Adds a new item after a specified item of the DLL.
 change()        Changes a specified item of the DLL to another item.
 switch()        Switches two items of the DLL.
 search()        Searches the DLL for a specified item.
-remove()        Removes a specified item from the DLL.
+remove()        Removes a specified item/node from the DLL.
 pop()           Removes the node at the front of the DLL and returns its content.
 peek()          Returns the content of the node at the front of the DLL.
 reverse()       Reverses the DLL.

@@ -47,7 +47,7 @@ add_after()     Adds a new item after a specified item of the DLL.
 change()        Changes a specified item of the DLL to another item.
 switch()        Switches two items of the DLL.
 search()        Searches the DLL for a specified item.
-remove()        Removes a specified item from the DLL.
+remove()        Removes a specified item/node from the DLL.
 pop()           Removes the node at the front of the DLL and returns its content.
 peek()          Returns the content of the node at the front of the DLL.
 reverse()       Reverses the DLL.
@@ -410,11 +410,16 @@ class DLL:
 
     def remove(self, data):
         """
-        Removes a specified item from the list and returns <True>. Returns
-        <False> if the specified item is not in the list.
+        Removes a specified item/node from the list and returns <True>.
+        Returns <False> if the specified item is not in the list.
         """
-        # Search the list for <data>
-        current_node = self.search(data)
+        # If <data> is a node
+        if (isinstance(data, DLnode)):
+            current_node = data
+
+        # If <data> is a value
+        else:
+            current_node = self.search(data)
 
         # Remove the node
         if (current_node is not None):
